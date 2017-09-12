@@ -1,0 +1,12 @@
+/*
+ Theme Name:   Twenty Fifteen Child For Polyfecta
+ Description:  Twenty Fifteen Modifications for Polyfecta
+ Author:       Charley
+ Author URI:   http://polyfecta.com
+ Template:     twentyfifteen
+ Version:      1.0.0
+*/
+
+.site-footer {
+    display: none;
+}
