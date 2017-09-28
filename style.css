@@ -4,5 +4,18 @@
  Author:       Charley
  Author URI:   http://polyfecta.com
  Template:     twentyfifteen
- Version:      1.0.2
+ Version:      1.0.3
 */
+
+/* Hide some parts of the page. */
+.byline,
+.cat-links {
+    display: none !important;
+}
+
+/* Remove background from entry metadata, make lighter. */
+.entry-footer {
+    background: none;
+    opacity: .7;
+    padding-top: 0;
+}
