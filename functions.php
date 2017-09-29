@@ -18,4 +18,7 @@ function remove_url_comments($fields) {
 }
 add_filter('comment_form_default_fields', 'remove_url_comments');
 
+// Remove comments-only RSS feed
+add_filter('feed_links_show_comments_feed', '__return_false');
+
 ?>
