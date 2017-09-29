@@ -21,4 +21,7 @@ add_filter('comment_form_default_fields', 'remove_url_comments');
 // Remove comments-only RSS feed
 add_filter('feed_links_show_comments_feed', '__return_false');
 
+// Remove <category> elements from RSS feeds.
+add_filter('the_category_rss', '__return_empty_string');
+
 ?>
