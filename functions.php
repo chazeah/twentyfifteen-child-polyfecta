@@ -24,4 +24,10 @@ add_filter('feed_links_show_comments_feed', '__return_false');
 // Remove <category> elements from RSS feeds.
 add_filter('the_category_rss', '__return_empty_string');
 
+// Show the full content in the RSS feed's "description".
+function show_full_content_in_description($excerpt){
+    return get_the_content_feed();
+}
+add_filter( 'the_excerpt_rss', 'show_full_content_in_description', 10, 1 );
+
 ?>
