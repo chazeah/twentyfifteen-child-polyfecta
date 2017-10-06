@@ -11,15 +11,24 @@ function my_theme_enqueue_styles() {
 }
 add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_styles' );
 
-// Remove URL field from comments
+// Remove URL field from comments.
 function remove_url_comments($fields) {
     unset($fields['url']);
     return $fields;
 }
 add_filter('comment_form_default_fields', 'remove_url_comments');
 
-// Remove comments-only RSS feed
-add_filter('feed_links_show_comments_feed', '__return_false');
+// Remove built-in RSS feeds.
+add_action('after_setup_theme', 'polyfecta_feed_setup' , 11);
+function polyfecta_feed_setup() {
+    remove_theme_support('automatic-feed-links');
+}
+
+// Add custom RSS link.
+add_action('wp_head', 'add_polyfecta_rss_link');
+function add_polyfecta_rss_link() {
+    echo '<link rel="alternate" type="application/rss+xml" title="Polyfecta" href="https://polyfecta.com/feed/"' . " />\n";
+}
 
 // Remove <category> elements from RSS feeds.
 add_filter('the_category_rss', '__return_empty_string');
