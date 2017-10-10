@@ -37,6 +37,9 @@ add_filter('the_category_rss', '__return_empty_string');
 function show_full_content_in_description($excerpt){
     return get_the_content_feed();
 }
-add_filter( 'the_excerpt_rss', 'show_full_content_in_description', 10, 1 );
+add_filter('the_excerpt_rss', 'show_full_content_in_description', 10, 1);
+
+// Enable shortcodes in text widgets.
+add_filter('widget_text', 'do_shortcode');
 
 ?>
