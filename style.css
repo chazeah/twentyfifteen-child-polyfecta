@@ -4,7 +4,7 @@
  Author:       Charley
  Author URI:   http://polyfecta.com
  Template:     twentyfifteen
- Version:      1.0.9
+ Version:      1.0.10
 */
 
 /* Hide some parts of the page. */
@@ -18,4 +18,9 @@
     background: none;
     opacity: .7;
     padding-top: 0;
+}
+
+/* Removes padding from subscriber popup submit button. */
+.polyfecta-submit-button-override {
+    padding: 0 !important;
 }
