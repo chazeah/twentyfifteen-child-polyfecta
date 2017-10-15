@@ -19,10 +19,18 @@ function remove_url_comments($fields) {
     return $fields;
 }
 
-// Remove built-in RSS feeds.
-add_action('after_setup_theme', 'polyfecta_feed_setup' , 11);
-function polyfecta_feed_setup() {
+add_action('after_setup_theme', 'polyfecta_setup' , 11);
+function polyfecta_setup() {
+    // Remove built-in RSS feeds.
     remove_theme_support('automatic-feed-links');
+
+    // Enable arbitrary sizes for custom logo.
+    add_theme_support('custom-logo', array(
+        'height'      => 248,
+        'width'       => 248,
+        'flex-height' => true,
+        'flex-width'  => true,
+    ) );
 }
 
 // Add custom RSS link.
