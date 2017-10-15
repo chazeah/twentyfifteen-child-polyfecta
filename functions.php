@@ -43,4 +43,23 @@ function show_full_content_in_description($excerpt){
 // Enable shortcodes in text widgets.
 add_filter('widget_text', 'do_shortcode');
 
+// Crazy hacks to enable SVG. (Part 1)
+add_filter('wp_check_filetype_and_ext', 'enable_svg_upload', 10, 4 );
+function enable_svg_upload($data, $file, $filename, $mimes) {
+    $filetype = wp_check_filetype( $filename, $mimes );
+
+    return [
+        'ext'             => $filetype['ext'],
+        'type'            => $filetype['type'],
+        'proper_filename' => $data['proper_filename']
+    ];
+}
+
+// Crazy hacks to enable SVG. (Part 2)
+add_filter('upload_mimes', 'cc_mime_types');
+function cc_mime_types( $mimes ){
+    $mimes['svg'] = 'image/svg+xml';
+    return $mimes;
+}
+
 ?>
