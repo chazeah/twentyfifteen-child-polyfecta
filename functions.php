@@ -52,6 +52,7 @@ function show_full_content_in_description($excerpt){
 add_filter('widget_text', 'do_shortcode');
 
 // Crazy hacks to enable SVG. (Part 1)
+// https://codepen.io/chriscoyier/post/wordpress-4-7-1-svg-upload
 add_filter('wp_check_filetype_and_ext', 'enable_svg_upload', 10, 4 );
 function enable_svg_upload($data, $file, $filename, $mimes) {
     $filetype = wp_check_filetype( $filename, $mimes );
@@ -64,6 +65,7 @@ function enable_svg_upload($data, $file, $filename, $mimes) {
 }
 
 // Crazy hacks to enable SVG. (Part 2)
+// https://codepen.io/chriscoyier/post/wordpress-4-7-1-svg-upload
 add_filter('upload_mimes', 'cc_mime_types');
 function cc_mime_types( $mimes ){
     $mimes['svg'] = 'image/svg+xml';

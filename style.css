@@ -4,7 +4,7 @@
  Author:       Charley
  Author URI:   http://polyfecta.com
  Template:     twentyfifteen
- Version:      1.0.13
+ Version:      1.0.14
 */
 
 /* Hide some parts of the page. */
@@ -23,4 +23,41 @@
 /* Removes padding from subscriber popup submit button. */
 .polyfecta-submit-button-override {
     padding: 0 !important;
+}
+
+/* Round cards. */
+.hentry,
+.secondary-toggle {
+    border-radius: 3px;
+}
+
+/* Hide dividing line between navigation and content section. */
+body:before {
+    box-shadow: none;
+}
+
+/* Tweaks to improve display on mobile. */
+@media screen and (max-width: 38.75em) {
+    /* Gives logo a bit more breathing room on mobile. */
+    .site-branding {
+        padding-right: 100px;
+    }
+
+    /* Space cards out a bit. */
+    .hentry {
+        margin: 10px 10px 30px;
+    }
+
+    /* Make menu appear as part of background. */
+    .secondary {
+        background-color: transparent;
+    }
+
+    .secondary.toggled-on {
+        border-bottom: 1px solid rgba(51, 51, 51, 0.1);
+    }
+
+    .widget_recent_entries {
+        display: none;
+    }
 }
