@@ -1,16 +1,29 @@
 <?php
-add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_styles' );
-function my_theme_enqueue_styles() {
-    $parent_style = 'twentyfifteen-style';
 
-    wp_enqueue_style($parent_style, get_template_directory_uri() . '/style.css' );
+// Add Polyfecta styles.
+function polyfecta_enqueue_styles() {
     wp_enqueue_style(
-        'child-style',
+        'twentyfifteen-style',
+        get_template_directory_uri() . '/style.css'
+    );
+    wp_enqueue_style('child-style',
         get_stylesheet_directory_uri() . '/style.css',
-        array($parent_style),
+        array('twentyfifteen-style'),
         wp_get_theme()->get('Version')
     );
 }
+add_action('wp_enqueue_scripts', 'polyfecta_enqueue_styles');
+
+// Load correct fonts. Must execute at higher priority.
+function use_correct_fonts() {
+    wp_dequeue_style('twentyfifteen-fonts');
+    wp_enqueue_style(
+        'polyfecta-fonts',
+        'https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,700&amp;subset=latin-ext',
+        false
+    );
+}
+add_action('wp_enqueue_scripts', 'use_correct_fonts', 11);
 
 // Remove URL field from comments.
 add_filter('comment_form_default_fields', 'remove_url_comments');
