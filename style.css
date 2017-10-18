@@ -4,7 +4,7 @@
  Author:       Charley
  Author URI:   http://polyfecta.com
  Template:     twentyfifteen
- Version:      1.0.16
+ Version:      1.0.17
 */
 
 /* Hide some parts of the page. */
@@ -102,13 +102,27 @@ body:before {
     padding-right: 20px;
 }
 
+#sgcboxContent .yikes-easy-mc-success-message {
+    /* Space out the success message a bit. */
+    margin-top: 55px;
+}
+
+#sgcboxContent .yikes-mailchimp-preloader {
+    /* Don't show that ugly spinner. */
+    visibility: hidden !important;
+}
+
 #sgcboxLoadedContent {
     background-color: transparent !important;
 }
 
+#sgcboxOverlay {
+    background: rgba(0, 0, 0, 0.5) !important;
+}
+
 /* Make the popup "close" button look like twentyfifteen. */
 #sgcboxClose {
-    background: transparent !important;
+    background: #fff !important;
     border: 1px solid rgba(51, 51, 51, 0.1) !important;
     border-radius: 2px;
     right: 8px !important;
