@@ -2,9 +2,9 @@
  Theme Name:   Twenty Fifteen Child For Polyfecta
  Description:  Twenty Fifteen Modifications for Polyfecta
  Author:       Charley
- Author URI:   http://polyfecta.com
+ Author URI:   https://polyfecta.com
  Template:     twentyfifteen
- Version:      1.0.18
+ Version:      1.0.19
 */
 
 /* Hide some parts of the page. */
@@ -207,7 +207,7 @@ input[type="submit"],
     font-family: 'Source Sans Pro', sans-serif;
 }
 
-/* Placeholder text color -- selectors need to be separate to work. */
+/* Placeholder text color - selectors need to be separate to work. */
 ::-webkit-input-placeholder {
     font-family: 'Source Sans Pro', sans-serif;
 }
