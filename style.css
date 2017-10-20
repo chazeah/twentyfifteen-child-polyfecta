@@ -4,7 +4,7 @@
  Author:       Charley
  Author URI:   https://polyfecta.com
  Template:     twentyfifteen
- Version:      1.0.19
+ Version:      1.0.20
 */
 
 /* Hide some parts of the page. */
@@ -23,6 +23,18 @@
 /* Removes padding from subscriber popup submit button. */
 .polyfecta-submit-button-override {
     padding: 0 !important;
+}
+
+.yikes-mailchimp-preloader {
+    /* Don't show that ugly spinner. */
+    visibility: hidden !important;
+}
+
+/* Make standalone form more attractive. */
+#subscribers-standalone-2 .form-field-description {
+    font-size: inherit;
+    font-style: normal;
+    margin-top: 0;
 }
 
 /* Round cards. */
@@ -98,6 +110,10 @@ body:before {
 }
 
 #sgcboxContent .form-field-description {
+    font-size: 1.5rem;
+    font-style: normal;
+    margin-bottom: 18px;
+    margin-top: 0;
     /* Ensure form text doesn't run into close button. */
     padding-right: 20px;
 }
@@ -105,11 +121,6 @@ body:before {
 #sgcboxContent .yikes-easy-mc-success-message {
     /* Space out the success message a bit. */
     margin-top: 55px;
-}
-
-#sgcboxContent .yikes-mailchimp-preloader {
-    /* Don't show that ugly spinner. */
-    visibility: hidden !important;
 }
 
 #sgcboxLoadedContent {
@@ -148,6 +159,10 @@ body:before {
 #sgcboxClose:hover,
 #sgcboxClose:focus {
     border: 1px solid rgba(51, 51, 51, 0.3) !important;
+}
+
+.yikes-easy-mc-form .form-field-description {
+    font-style: normal;
 }
 
 /* Set up font default weights. */
