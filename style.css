@@ -4,7 +4,7 @@
  Author:       Charley
  Author URI:   https://polyfecta.com
  Template:     twentyfifteen
- Version:      1.0.20
+ Version:      1.0.21
 */
 
 /* Hide some parts of the page. */
@@ -173,6 +173,58 @@ body:before {
 
 .copyright-link:hover {
     border-bottom-color: transparent !important;
+}
+
+/* Style footnotes. */
+.entry-content a[href^="#easy-footnote"] {
+    border-bottom: none;
+}
+
+.qtip-content a {
+    border-bottom: 1px solid #333;
+}
+
+.easy-footnotes-wrapper {
+    color: rgba(51, 51, 51, 0.7);
+    font-size: 1.2rem;
+}
+
+.easy-footnote-to-top {
+    border-bottom: none !important;
+    left: -3px;
+    position: relative;
+    top: 3px;
+}
+
+/* Make the footnotes section the same font-size as image captions. */
+@media screen and (min-width: 46.25em) {
+    .easy-footnotes-wrapper {
+        font-size: 1.4rem;
+    }
+}
+
+@media screen and (min-width: 55em) {
+    .easy-footnotes-wrapper {
+        font-size: 1.6rem;
+    }
+}
+
+@media screen and (min-width: 59.6875em) {
+    .easy-footnotes-wrapper {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (min-width: 68.75em) {
+    .easy-footnotes-wrapper {
+        font-size: 1.4rem;
+    }
+}
+
+@media screen and (min-width: 77.5em) {
+    .easy-footnotes-wrapper {
+        font-size: 1.6rem;
+    }
 }
 
 /* Set up font default weights. */
