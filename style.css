@@ -4,7 +4,7 @@
  Author:       Charley
  Author URI:   https://polyfecta.com
  Template:     twentyfifteen
- Version:      1.0.21
+ Version:      1.0.22
 */
 
 /* Hide some parts of the page. */
@@ -67,6 +67,12 @@ body:before {
 
     .secondary.toggled-on {
         border-bottom: 1px solid rgba(51, 51, 51, 0.1);
+    }
+
+    /* Hide an off-color line. */
+    .site-header {
+        border-bottom: none;
+        padding-bottom: 3px !important;
     }
 }
 
